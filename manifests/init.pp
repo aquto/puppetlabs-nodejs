@@ -116,16 +116,8 @@ class nodejs(
       }
     }
 
-    'Archlinux': {
-      # Archlinux installes npm with the nodejs package.
-    }
-
     default: {
-      package { 'npm':
-        name    => $nodejs::params::npm_pkg,
-        ensure  => present,
-        require => Anchor['nodejs::repo']
-      }
+      # nodejs installes npm with the nodejs package.
     }
   }
 
